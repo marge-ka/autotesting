@@ -86,6 +86,7 @@ mvn test -Dtest=IntershopAuthTests#testSuccessRegistrationInIntershop
 | Успешная авторизация    | user29497694     | 29497694@test.ru | Пользователь с заказами         |
 | Пустая история заказов  | 29501999@test.ru | 29501999@test.ru | Новый пользователь              |
 | Тестовый пользователь   | test             | test             | Для проверки ошибок авторизации |
+
 Важно: Для тестов регистрации генерируются уникальные email на основе временной метки:
 ```java
 String user = System.currentTimeMillis() / 60_000 + "@test.ru";
@@ -122,9 +123,12 @@ target/surefire-reports/
 ```
 ## Скриншоты падающих тестов
 **Реализовано только для класса `IntershopAuthTests.java`:**
-При падении тестов в классе `IntershopAuthTests.java` автоматически сохраняются скриншоты:
+При падении тестов в классе `IntershopAuthTests.java` автоматически сохраняются скриншоты.
+
 Путь: screenshots/имяТеста_ГГГГММДД_ЧЧММСС.png
+
 Пример: screenshots/testMessagePasswordRecoveryPage_20260212_143015.png
+
 Для остальных тестовых классов механизм скриншотов **не реализован**.
 
 
